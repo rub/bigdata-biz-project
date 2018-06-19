@@ -3,6 +3,7 @@
     <title>Big Dive Project</title>
     <link href="./style.css" rel="stylesheet" />
     <script src="https://d3js.org/d3.v5.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./main.js" async></script>
   </head>
   <body>
@@ -14,12 +15,17 @@
     </header>
 
     <main>
-      <div class="hidden-chart"></div>
 
       <div class="sliders-container">
-        <input class="slider" type="range">
-        <input class="slider" type="range">
+        <input class="slider" type="range" min="0" max="100" id="one" value="0">
+        <input class="slider" type="range" min="0" max="100" id="two" value="0">
       </div>
+        <svg id="hidden-chart" >
+        <g >    
+        <rect id="sliderect"></rect>
+            </g>    
+        </svg>
+
 
       <div class="mega-svg">
           <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -7287,11 +7293,11 @@
                    <text transform="matrix(1 0 0 1 75.46 758.8145)" class="st4 st2 st7">23 times</text>
                  </g>
                </g>
-               <g id="Line">
-                 <text transform="matrix(1 0 0 1 408 216.9761)" class="st1 st2 st3">56%</text>
-                 <text transform="matrix(1 0 0 1 408 275.0815)" class="st4 st8 st6">OF CO2 REDUCED</text>
-                 <text transform="matrix(1 0 0 1 404.1665 333.0815)" class="st4 st8 st6">FOR A TOTAL OF 2342355 TONS</text>
-                 <line class="st9" x1="408" y1="298" x2="1519" y2="298"/>
+               <g id="g">
+                 <text transform="matrix(1 0 0 1 408 216.9761)" class="st1 st2 st3" id="co3" ></text>
+                 <text transform="matrix(1 0 0 1 408 275.0815)" class="st4 st8 st6" id="co4"></text>
+                 <text transform="matrix(1 0 0 1 404.1665 333.0815)" class="st4 st8 st6" id="co5"></text>
+                 <line class="st9" x1="0" y1="0" x2="0" y2="0" id="co2"/>
                </g>
                <g id="IconPlantTree">
                  <g>
@@ -7351,13 +7357,13 @@
                <g id="TOTplantTree">
                  <text transform="matrix(1 0 0 1 1653.7205 751)" class="st4 st8 st6">TREES</text>
                  <g>
-                   <text transform="matrix(1 0 0 1 1665.7205 801)" class="st4 st2 st10">828584,88484,884</text>
+                   <text transform="matrix(1 0 0 1 1665.7205 801)" class="st4 st2 st10"id="tre">0</text>
                  </g>
                  <g>
-                   <text transform="matrix(1 0 0 1 1665.7205 953)" class="st4 st2 st10">45,456</text>
+                   <text transform="matrix(1 0 0 1 1665.7205 953)" class="st4 st2 st10" id="plan">0</text>
                  </g>
                  <text transform="matrix(1 0 0 1 1653.5457 916)" class="st4 st8 st6">PLANTS</text>
-                 <line class="st9" x1="1666" y1="852" x2="1830" y2="852"/>
+                 <line class="st9" x1="1666" y1="852" x2="1830" y2="852" id="co2"/>
                </g>
                </svg>
        
